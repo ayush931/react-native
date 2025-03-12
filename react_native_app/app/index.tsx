@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 function Index() {
   const router = useRouter();
   const onContinue = () => {
-    router.navigate("/login")
+    router.navigate("/login");
   };
 
   return (
@@ -26,10 +26,19 @@ function Index() {
       >
         Welcome to react-native
       </Text>
-      <Link href={"/about"}>Go to about</Link>
-      <Link href={"/(tab)"}>Go to tab</Link>
-      <Link href={"/(drawer)"}>Go to Drawer</Link>
+      <Link style={{ padding: 10 }} href={"/about"}>
+        Go to about
+      </Link>
+      <Link style={{ padding: 10 }} href={"/(tab)"}>
+        Go to tab
+      </Link>
+      <Link style={{ padding: 10 }} href={"/(drawer)"}>
+        Go to Drawer
+      </Link>
       <MyButton title={"continue"} onPress={onContinue} />
+      <Link style={{ padding: 10 }} href={"/scrollMap"}>
+        Scroll, Map view
+      </Link>
     </View>
   );
 }

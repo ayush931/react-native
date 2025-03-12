@@ -1,14 +1,14 @@
 import MyButton from "@/app-example/components/MyButton";
 import { useRouter } from "expo-router";
-import { Image, TextInput, View } from "react-native";
+import { Image, ScrollView, TextInput, View } from "react-native";
 
 const Signup = () => {
   const router = useRouter();
-  function onRegister () {
+  function onRegister() {
     router.navigate("/login");
   }
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
       <Image
         source={require("@/assets/images/download.png")}
         style={{
@@ -18,13 +18,13 @@ const Signup = () => {
         resizeMode="cover"
       />
       <View style={{ padding: 20, gap: 20 }}>
-      <TextInput
+        <TextInput
           placeholder="Enter your name"
           style={{
             borderWidth: 1,
             height: 50,
             paddingHorizontal: 20,
-            borderRadius: 10
+            borderRadius: 10,
           }}
         />
         <TextInput
@@ -33,9 +33,9 @@ const Signup = () => {
             borderWidth: 1,
             height: 50,
             paddingHorizontal: 20,
-            borderRadius: 10
+            borderRadius: 10,
           }}
-          onChangeText={e => console.log(e)}
+          onChangeText={(e) => console.log(e)}
         />
         <TextInput
           placeholder="Enter your password"
@@ -43,7 +43,7 @@ const Signup = () => {
             borderWidth: 1,
             height: 50,
             paddingHorizontal: 20,
-            borderRadius: 10
+            borderRadius: 10,
           }}
         />
         <TextInput
@@ -52,12 +52,66 @@ const Signup = () => {
             borderWidth: 1,
             height: 50,
             paddingHorizontal: 20,
-            borderRadius: 10
+            borderRadius: 10,
+          }}
+        />
+        <TextInput
+          placeholder="Re-Enter your password"
+          style={{
+            borderWidth: 1,
+            height: 50,
+            paddingHorizontal: 20,
+            borderRadius: 10,
+          }}
+        />
+        <TextInput
+          placeholder="Re-Enter your password"
+          style={{
+            borderWidth: 1,
+            height: 50,
+            paddingHorizontal: 20,
+            borderRadius: 10,
+          }}
+        />
+        <TextInput
+          placeholder="Re-Enter your password"
+          style={{
+            borderWidth: 1,
+            height: 50,
+            paddingHorizontal: 20,
+            borderRadius: 10,
+          }}
+        />
+        <TextInput
+          placeholder="Re-Enter your password"
+          style={{
+            borderWidth: 1,
+            height: 50,
+            paddingHorizontal: 20,
+            borderRadius: 10,
+          }}
+        />
+        <TextInput
+          placeholder="Re-Enter your password"
+          style={{
+            borderWidth: 1,
+            height: 50,
+            paddingHorizontal: 20,
+            borderRadius: 10,
+          }}
+        />
+        <TextInput
+          placeholder="Re-Enter your password"
+          style={{
+            borderWidth: 1,
+            height: 50,
+            paddingHorizontal: 20,
+            borderRadius: 10,
           }}
         />
         <MyButton title={"Register"} onPress={onRegister} />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
