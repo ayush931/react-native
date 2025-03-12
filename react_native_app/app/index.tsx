@@ -1,7 +1,13 @@
-import { Link } from "expo-router";
+import MyButton from "@/app-example/components/MyButton";
+import { Link, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
 function Index() {
+  const router = useRouter();
+  const onContinue = () => {
+    router.navigate("/login")
+  };
+
   return (
     <View
       style={{
@@ -23,6 +29,7 @@ function Index() {
       <Link href={"/about"}>Go to about</Link>
       <Link href={"/(tab)"}>Go to tab</Link>
       <Link href={"/(drawer)"}>Go to Drawer</Link>
+      <MyButton title={"continue"} onPress={onContinue} />
     </View>
   );
 }
