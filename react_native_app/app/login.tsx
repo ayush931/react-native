@@ -8,19 +8,19 @@ const Login = () => {
   // const [value1, setValue1] = useState("");
 
   const [value, setValue] = useState({
-    value1: '',
-    value2: ''
-  })
+    value1: "",
+    value2: "",
+  });
 
   useEffect(() => {
-    console.log("Calling...")
-  }, [value?.value1])
+    console.log("Calling...");
+  }, [value?.value1]);
 
   const router = useRouter();
   function onLogin() {
     router.navigate("/signup");
     // console.log(Number(value) + Number(value1));
-    console.log(Number(value?.value1) + Number(value?.value2))
+    console.log(Number(value?.value1) + Number(value?.value2));
   }
 
   return (
@@ -43,7 +43,7 @@ const Login = () => {
             borderRadius: 10,
           }}
           // onChangeText={(e) => setValue(e)}
-          onChangeText={e => setValue(prev => ({...prev, value1: e}))}
+          onChangeText={(e) => setValue((prev) => ({ ...prev, value1: e }))}
         />
         <TextInput
           placeholder="Enter your password"
@@ -54,7 +54,7 @@ const Login = () => {
             borderRadius: 10,
           }}
           // onChangeText={(e) => setValue1(e)}
-          onChangeText={e => setValue(prev => ({...prev, value2: e}))}
+          onChangeText={(e) => setValue((prev) => ({ ...prev, value2: e }))}
         />
         <MyButton title={"Login"} onPress={onLogin} />
       </View>

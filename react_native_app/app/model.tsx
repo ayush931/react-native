@@ -24,7 +24,7 @@ function Model() {
         onBackButtonPress={() => setVisible(false)}
         animationIn={"slideInUp"}
         animationOut={"slideOutDown"}
-        style={{justifyContent: 'flex-end', margin: 0}}
+        style={{ justifyContent: "flex-end", margin: 0 }}
       >
         <View style={{ backgroundColor: "white", height: 200 }}>
           <Button title="Close modal" onPress={() => setVisible(false)} />

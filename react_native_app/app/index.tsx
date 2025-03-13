@@ -40,7 +40,9 @@ function Index() {
         Scroll, Map view
       </Link>
       <Link href={"/leaderboard"}>Leader Board</Link>
-      <Link style={{ padding: 10 }} href={'/model'}>Models</Link>
+      <Link style={{ padding: 10 }} href={"/model"}>
+        Models
+      </Link>
     </View>
   );
 }
