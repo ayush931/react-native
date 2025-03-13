@@ -1,8 +1,25 @@
 import MyButton from "@/components/MyButton";
 import { Link, useRouter } from "expo-router";
 import { Text, View } from "react-native";
+import "@/global.css";
+import { useFonts, Poppins_700Bold_Italic, Poppins_300Light } from '@expo-google-fonts/poppins'
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from "react";
+
+SplashScreen.preventAutoHideAsync();
 
 function Index() {
+  const [loaded, error] = useFonts({
+    Poppins_700Bold_Italic,
+    Poppins_300Light
+  })
+
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded])
+
   const router = useRouter();
   const onContinue = () => {
     router.navigate("/login");
@@ -20,8 +37,9 @@ function Index() {
       <Text
         style={{
           fontSize: 30,
-          fontWeight: "800",
+          // fontWeight: "800",
           color: "white",
+          fontFamily: 'Poppins_700Bold_Italic'
         }}
       >
         Welcome to react-native
@@ -39,8 +57,8 @@ function Index() {
       <Link style={{ padding: 10 }} href={"/scrollMap"}>
         Scroll, Map view
       </Link>
-      <Link href={"/leaderboard"}>Leader Board</Link>
-      <Link style={{ padding: 10 }} href={"/model"}>
+      <Link href={"/leaderboard"} className="pt-4">Leader Board</Link>
+      <Link className="p-4" href={"/model"}>
         Models
       </Link>
     </View>

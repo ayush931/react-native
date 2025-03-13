@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Modal, StyleSheet, View } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
 import ReactNativeModal from "react-native-modal";
 
 function Model() {
