@@ -1,6 +1,5 @@
-import MyButton from "@/app-example/components/MyButton";
 import { Link, useRouter } from "expo-router";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 
 function Index() {
   const router = useRouter();
@@ -35,10 +34,11 @@ function Index() {
       <Link style={{ padding: 10 }} href={"/(drawer)"}>
         Go to Drawer
       </Link>
-      <MyButton title={"continue"} onPress={onContinue} />
+      <Button title={"continue"} onPress={onContinue} />
       <Link style={{ padding: 10 }} href={"/scrollMap"}>
         Scroll, Map view
       </Link>
+      <Link href={"/leaderboard"}>Leader Board</Link>
     </View>
   );
 }

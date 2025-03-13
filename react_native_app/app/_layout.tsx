@@ -10,6 +10,7 @@ function RootLayout() {
       <Stack.Screen name="login" />
       <Stack.Screen name="signup" />
       <Stack.Screen name="scrollMap" />
+      <Stack.Screen name="leaderboard" />
     </Stack>
   );
 }
