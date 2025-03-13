@@ -1,5 +1,4 @@
 import { FlatList, ScrollView, Text, View } from "react-native";
-import { green } from "react-native-reanimated/lib/typescript/Colors";
 
 function ScrollMap() {
   return (
