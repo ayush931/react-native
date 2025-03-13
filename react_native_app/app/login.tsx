@@ -1,6 +1,7 @@
-import { Button, Image, TextInput, View } from "react-native";
+import { Image, TextInput, View } from "react-native";
 import { useEffect, useState } from "react";
 import { useRouter } from "expo-router";
+import MyButton from "@/components/MyButton";
 
 const Login = () => {
   // const [value, setValue] = useState("");
@@ -55,7 +56,7 @@ const Login = () => {
           // onChangeText={(e) => setValue1(e)}
           onChangeText={e => setValue(prev => ({...prev, value2: e}))}
         />
-        <Button title={"Login"} onPress={onLogin} />
+        <MyButton title={"Login"} onPress={onLogin} />
       </View>
     </View>
   );

@@ -1,5 +1,6 @@
+import MyButton from "@/components/MyButton";
 import { useRouter } from "expo-router";
-import { Button, Image, ScrollView, TextInput, View } from "react-native";
+import { Image, ScrollView, TextInput, View } from "react-native";
 
 const Signup = () => {
   const router = useRouter();
@@ -108,7 +109,7 @@ const Signup = () => {
             borderRadius: 10,
           }}
         />
-        <Button title={"Register"} onPress={onRegister} />
+        <MyButton title={"Register"} onPress={onRegister} />
       </View>
     </ScrollView>
   );
